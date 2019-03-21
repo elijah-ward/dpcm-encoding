@@ -1,7 +1,7 @@
-#include "dpcm_encoding_function.h"
+#include "DPCM_encoding_function.h"
 
 /**
- * @brief      { validates arguments }
+ * @brief      validate commandline arguments
  *
  * @param[in]  argc  The argc
  *
