@@ -105,7 +105,7 @@ void encode_using_dpcm(
                     // Use CALIC with GAP
                     int t, prediction, error;
 
-                    // Gather all 7 neightbour pixels
+                    // Gather all 7 neighbour pixels
                     int ww = input_image.image[row][col - 2];
                     int w = input_image.image[row][col - 1];
                     int nw = input_image.image[row - 1][col - 1];
