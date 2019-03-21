@@ -1,4 +1,37 @@
-#include "dpcm_encoding_function.h"
+#include "DPCM_encoding_function.h"
+
+#define MAX_OUTPUT_FILENAME_LEN 100
+
+/** PRIVATE FUNCTION
+ * @brief      Counts the number of unique elements in an integer array.
+ *
+ * @param      arr   The arr
+ * @param[in]  len   The length
+ *
+ * @return     Number of unique elements.
+ */
+
+int count_unique(int *arr, int len) {
+    int unique = 1;
+    for (int i = 1; i < len; i++) {
+        int j = 0;
+        for (j = 0; j < i; j++) {
+            if (arr[i] == arr[j])
+                break;
+        }
+        if(i==j) unique++;
+    }
+    return unique;
+}
+
+/**
+ * @brief      Encodes a PGM image with the DPCM scheme
+ *
+ * @param      in_PGM_filename_ptr     In pgm filename pointer
+ * @param[in]  prediction_rule         The prediction rule
+ * @param      avg_absolute_error_ptr  The average absolute error pointer
+ * @param      std_absolute_error_ptr  The standard absolute error pointer
+ */
 
 void encode_using_dpcm(
     char *in_PGM_filename_ptr,
