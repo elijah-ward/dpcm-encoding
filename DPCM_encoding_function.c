@@ -236,7 +236,7 @@ void encode_using_dpcm(
     /* ========== OUTPUT Error Frequency File =========== */
 
     char error_frequency_filename[MAX_OUTPUT_FILENAME_LEN];
-    snprintf(error_frequency_filename, MAX_OUTPUT_FILENAME_LEN, "%s.errors.csv", in_PGM_filename_ptr);
+    snprintf(error_frequency_filename, MAX_OUTPUT_FILENAME_LEN, "%s.%d.errors.csv", in_PGM_filename_ptr, prediction_rule);
 
     FILE *out_freq_fp;
     out_freq_fp = fopen(error_frequency_filename, "w+");
